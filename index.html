@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Inline Website</title>
-  
-  <!-- Inline CSS -->
+  <title>Sunrise High School</title>
   <style>
+    /* Base Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -14,19 +13,21 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
       line-height: 1.6;
     }
 
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px;
+      background: #003366;
+      color: white;
+      padding: 20px 0;
       text-align: center;
     }
 
     nav {
-      background: #444;
+      background: #0055a5;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -34,85 +35,105 @@
 
     nav a {
       color: white;
-      padding: 14px 20px;
+      padding: 15px 20px;
       text-decoration: none;
       display: block;
     }
 
     nav a:hover {
-      background-color: #555;
+      background: #003f7f;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x400?text=School+Banner') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 1px 1px 5px black;
     }
 
     main {
-      padding: 20px;
+      padding: 30px 20px;
     }
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+    .section {
+      margin-bottom: 40px;
     }
 
-    .box {
-      background: #f4f4f4;
-      padding: 20px;
-      flex: 1 1 300px;
-      border: 1px solid #ccc;
+    .section h2 {
+      color: #003366;
+      margin-bottom: 10px;
     }
 
     footer {
-      background: #333;
+      background: #003366;
       color: white;
       text-align: center;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 15px;
     }
 
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
       }
+
+      .hero {
+        font-size: 1.2rem;
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HTML content -->
   <header>
-    <h1>My Responsive Website</h1>
+    <h1>Sunrise High School</h1>
+    <p>Empowering Future Leaders</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#contact">Contact</a>
   </nav>
 
+  <div class="hero" id="home">
+    Welcome to Sunrise High School
+  </div>
+
   <main>
-    <div class="container">
-      <div class="box">
-        <h2>Box 1</h2>
-        <p>This is some content in box 1.</p>
-      </div>
-      <div class="box">
-        <h2>Box 2</h2>
-        <p>This is some content in box 2.</p>
-      </div>
-      <div class="box">
-        <h2>Box 3</h2>
-        <p>This is some content in box 3.</p>
-      </div>
-    </div>
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <p>Sunrise High School is dedicated to providing quality education in a nurturing environment. We focus on academic excellence, creativity, and character development.</p>
+    </section>
+
+    <section class="section" id="classes">
+      <h2>Our Classes</h2>
+      <ul>
+        <li>Kindergarten to Grade 5 - Primary School</li>
+        <li>Grade 6 to 8 - Middle School</li>
+        <li>Grade 9 to 12 - High School</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@sunrisehigh.edu</p>
+      <p>Phone: +1 (555) 123-4567</p>
+      <p>Address: 123 Learning Lane, Education City</p>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 My Website</p>
+    <p>© 2025 Sunrise High School. All rights reserved.</p>
   </footer>
 
-  <!-- Inline JavaScript -->
   <script>
-    console.log("Website loaded successfully.");
+    console.log("School website loaded.");
   </script>
 
 </body>
